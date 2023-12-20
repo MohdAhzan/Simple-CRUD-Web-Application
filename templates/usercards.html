@@ -1,0 +1,25 @@
+{{define "user-card"}}
+<style > 
+a.card-link{
+    font-size: 1.2rem;
+  color: #d30606;
+  text-decoration: none;
+
+ }
+a.card-update{
+    font-size: 1.2rem;
+  color: #005aa8;
+  text-decoration: none;
+
+ }
+    </style>
+  
+<div class="card ind-card success btn-block fa-lg gradient-custom-3 " style="width: 20rem " >
+  <div class="card-body">
+    <h4 class="card-title ">{{.UserName}}</h4>
+    <h5 class="card-subtitle mb-2 ">{{.Email}}</h5>
+<a href="/usernameupdate?Email={{.Email}}" class="card-update">UPDATE</a>
+    <a href="/admindelete?Email={{.Email}}" class="card-link" >DELETE</a>
+  </div>
+</div>
+{{end}}
